@@ -14,7 +14,7 @@ def ocr(image_file, api_key=""):
                 'content': base64_image,
             },
             'features': [{
-                'type': 'TEXT_DETECTION',
+                'type': 'LABEL_DETECTION',
                 'maxResults': 1,
             }]
 
@@ -31,7 +31,7 @@ def ocr(image_file, api_key=""):
     return text
 
 # imgの画像ファイルのあるPATHは皆様の環境に合わせて変更してください。
-img = "/Users/cyberbrain/Desktop/ocr/test.png"
-key = "ここにGoogle Cloud PlatformのKeyを貼り付けます。"
+img = "/Users/tomjoz/Dogsym-app/img/test.png"
+key = "AIzaSyCMDsUYX3yI6sBu-2Xvsm7FnXn9_oQqVeY"
 data = ocr(img, key)
 print(data)
